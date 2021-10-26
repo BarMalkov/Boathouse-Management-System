@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="bms-webapp">
+    <output-path>$PROJECT_DIR$/out/artifacts/bms_webapp</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Server/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="javaee-facet-classes" facet="Server/web/Web" />
+          <element id="module-output" name="Engine" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/Engine/libraries/gson-2.8.6.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

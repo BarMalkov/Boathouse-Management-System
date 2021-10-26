@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/Server/web/editData.html" value="file://$PROJECT_DIR$/Server/web" />
+        <entry key="file://$PROJECT_DIR$/Server/web/menu.html" value="file://$PROJECT_DIR$/Server/web" />
+        <entry key="file://$PROJECT_DIR$/Server/web/newAlert.html" value="file://$PROJECT_DIR$/Server/web" />
+        <entry key="file://$PROJECT_DIR$/Server/web/newUser.html" value="file://$PROJECT_DIR$/Server/web" />
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,46 @@
+package Servlets;
+
+import EnginePackage.EngineClass;
+import Errors.IllegalActionException;
+import ReservationPackage.Reservation;
+import com.google.gson.Gson;
+import utils.ServletUtils;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.stream.Collectors;
+
+
+@WebServlet(name = "boatsToAssignServlet", urlPatterns = "/boatsToAssign")
+public class BoatsToAssignServlet extends HttpServlet {
+
+    Gson gson = new Gson();
+    Reservation reservationToAssign;
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        EngineClass serverEngine = ServletUtils.getServerEngine(getServletContext());
+        String boats = "";
+        try {
+            boats = gson.toJson(serverEngine.getBoatsOfReservation(reservationToAssign));
+        } catch (IllegalActionException ignored) {}
+        resp.setContentType("application/json");
+        try (
+                PrintWriter out = resp.getWriter()) {
+            out.println(boats);
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        BufferedReader reader = req.getReader();
+        String reservationStr = reader.lines().collect(Collectors.joining());
+        reservationToAssign = gson.fromJson(reservationStr, Reservation.class);
+    }
+}

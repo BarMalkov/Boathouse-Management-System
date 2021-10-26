@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="addObjectStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/12ab076b66.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="navbar">
+        <ul>
+            <li><a href="menu.html" class="a_parent">
+                <div class="wrap">
+                    <span class="text">Home</span>
+                </div>
+            </a></li>
+            <li><a href="updatePersonalInfo.html" class="a_parent">
+                <div class="wrap">
+                    <span class="text">personal information</span>
+                </div>
+            </a></li>
+            <li><a href="#" class="a_parent" id="reservation">
+                <div class="wrap">
+                    <span class="text">Reservations</span>
+                </div>
+            </a>
+                <div class="dd_menu">
+                    <ul>
+                        <li>
+                            <a href="newReservation.html" class="dd_menu_a" id="newReservation">
+                                <div class="wrap">
+                                    <span class="text">Add Reservation</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="myReservations">
+                                <div class="wrap">
+                                    <span class="text">My Reservations</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="managerData">
+                            <a href="showData.html" class="dd_menu_a" id="allReservations">
+                                <div class="wrap">
+                                    <span class="text">All Reservations</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="managerData"><a href="#" class="a_parent">
+                <div class="wrap">
+                    <span class="text">Users</span>
+                </div>
+            </a>
+                <div class="dd_menu">
+                    <ul>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="user">
+                                <div class="wrap">
+                                    <span class="text">Show users</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="newUser.html" class="dd_menu_a" id="newUser">
+                                <div class="wrap">
+                                    <span class="text">Add user</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="managerData"><a href="#" class="a_parent">
+                <div class="wrap">
+                    <span class="text">Boats</span>
+                </div>
+            </a>
+                <div class="dd_menu">
+                    <ul>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="boat">
+                                <div class="wrap">
+                                    <span class="text">Show boats</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="newBoat.html" class="dd_menu_a" id="newBoat">
+                                <div class="wrap">
+                                    <span class="text">Add boat</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="managerData" ><a href="#" class="a_parent">
+                <div class="wrap">
+                    <span class="text">Activities</span>
+                </div>
+            </a>
+                <div class="dd_menu">
+                    <ul>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="activity">
+                                <div class="wrap">
+                                    <span class="text">Show activities</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="newActivity.html" class="dd_menu_a" id="newActivity">
+                                <div class="wrap">
+                                    <span class="text">Add Activity</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="managerData" ><a href="#" class="a_parent" id="assigning">
+                <div class="wrap">
+                    <span class="text">Assigns</span>
+                </div>
+            </a>
+                <div class="dd_menu">
+                    <ul>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="newAssigning">
+                                <div class="wrap">
+                                    <span class="text">Add Assigning</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="allAssigns">
+                                <div class="wrap">
+                                    <span class="text">Show Assigns</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#" class="a_parent" id="alerts">
+                <div class="wrap">
+                    <span class="text">
+                        <i class="far fa-bell"></i>
+                    </span>
+                </div></a>
+                <div class="dd_menu">
+                    <ol class="alerts-container"></ol>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <button id="logOutButton">Log Out</button>
+</div>
+<div class="testbox">
+    <form method="post" action="newUser" id="formElement">
+        <div class="banner">
+            <h1>Add User</h1>
+        </div>
+        <br/>
+        <br/>
+        <div class="colums">
+            <div class="item">
+                <label for="ID">ID<span>*</span></label>
+                <input id="ID" type="text"   name="ID" required/>
+            </div>
+            <div class="item">
+                <label for="userName">Username<span>*</span></label>
+                <input id="userName" type="text" name="userName" required/>
+            </div>
+            <div class="item">
+                <label for="email">Email Address<span>*</span></label>
+                <input id="email" type="text"   name="email" required/>
+            </div>
+            <div class="item">
+                <label for="password">Password<span>*</span></label>
+                <input id="password" type="text"   name="password" required/>
+            </div>
+            <div class="item">
+                <label for="phone">Phone Number<span>*</span></label>
+                <input id="phone" type="text"   name="phone" required/>
+            </div>
+            <div class="item">
+                <label for="age">Age<span>*</span></label>
+                <input id="age" type="text"   name="age" required/>
+            </div>
+            <div class="item">
+                <label for="dateOfRegistration">Date Of Registration<span>*</span></label>
+                <input id="dateOfRegistration" type="date" name="dateOfRegistration" required/>
+            </div>
+            <div class="item">
+                <label for="dateOfExpiration">Date Of Expiration<span>*</span></label>
+                <input id="dateOfExpiration" type="date"   name="dateOfExpiration" required/>
+            </div>
+        </div>
+        <div class="question">
+            <label>Is the new user a boat owner at the club?</label>
+            <div class="question-answer">
+                <div>
+                    <input type="radio" value="none" id="yes_private" name="hasPrivateBoat" required/>
+                    <label for="yes_private" class="radio"><span>Yes</span></label>
+                </div>
+                <div>
+                    <input type="radio" value="none" id="no_private" name="hasPrivateBoat"/>
+                    <label for="no_private" class="radio"><span>No</span></label>
+                </div>
+            </div>
+        </div>
+        <div class="colums" id="has-Private-Boat">
+            <div class="item">
+                <label for="privateBoatID">Private Boat ID<span>*</span></label>
+                <input id="privateBoatID" type="text" name="privateBoatID"/>
+            </div>
+        </div>
+        <div class="item">
+            <p>User Rowing Level</p>
+            <select name="boatType" id="boatType" required="required">
+                <option label="Please Select" value=""></option>
+                <option value="BEGINNER" >BEGINNER</option>
+                <option value="INTERMEDIATE">INTERMEDIATE</option>
+                <option value="EXPERT">EXPERT</option>
+            </select>
+        </div>
+        <div class="question">
+            <label>Is the new user a system manager at the club?</label>
+            <div class="question-answer">
+                <div>
+                    <input type="radio" value="none" id="yes_manager" name="isManager" required/>
+                    <label for="yes_manager" class="radio"><span>Yes</span></label>
+                </div>
+                <div>
+                    <input type="radio" value="none" id="no_manager" name="isManager"/>
+                    <label for="no_manager" class="radio"><span>No</span></label>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <label for="comment">Comments</label>
+            <textarea id="comment" rows="3"></textarea>
+        </div>
+        <div class="button-container">
+            <button type="submit" value="Add User">Add User</button>
+        </div>
+    </form>
+</div>
+<script src="menu.js"></script>
+<script src="newObject.js"></script>
+</body>
+</html>

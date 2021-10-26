@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boats</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/12ab076b66.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="navbar">
+        <ul>
+            <li><a href="menu.html" class="a_parent">
+                <div class="wrap">
+                    <span class="text">Home</span>
+                </div>
+            </a></li>
+            <li><a href="updatePersonalInfo.html" class="a_parent">
+                <div class="wrap">
+                    <span class="text">personal information</span>
+                </div>
+            </a></li>
+            <li><a href="#" class="a_parent" id="reservation">
+                <div class="wrap">
+                    <span class="text">Reservations</span>
+                </div>
+            </a>
+                <div class="dd_menu">
+                    <ul>
+                        <li>
+                            <a href="newReservation.html" class="dd_menu_a" id="newReservation">
+                                <div class="wrap">
+                                    <span class="text">Add Reservation</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="myReservations">
+                                <div class="wrap">
+                                    <span class="text">My Reservations</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="managerData">
+                            <a href="showData.html" class="dd_menu_a" id="allReservations">
+                                <div class="wrap">
+                                    <span class="text">All Reservations</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="managerData"><a href="#" class="a_parent">
+                <div class="wrap">
+                    <span class="text">Users</span>
+                </div>
+            </a>
+                <div class="dd_menu">
+                    <ul>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="user">
+                                <div class="wrap">
+                                    <span class="text">Show users</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="newUser.html" class="dd_menu_a" id="newUser">
+                                <div class="wrap">
+                                    <span class="text">Add user</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="managerData"><a href="#" class="a_parent">
+                <div class="wrap">
+                    <span class="text">Boats</span>
+                </div>
+            </a>
+                <div class="dd_menu">
+                    <ul>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="boat">
+                                <div class="wrap">
+                                    <span class="text">Show boats</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="newBoat.html" class="dd_menu_a" id="newBoat">
+                                <div class="wrap">
+                                    <span class="text">Add boat</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="managerData" ><a href="#" class="a_parent">
+                <div class="wrap">
+                    <span class="text">Activities</span>
+                </div>
+            </a>
+                <div class="dd_menu">
+                    <ul>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="activity">
+                                <div class="wrap">
+                                    <span class="text">Show activities</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="newActivity.html" class="dd_menu_a" id="newActivity">
+                                <div class="wrap">
+                                    <span class="text">Add Activity</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="managerData" ><a href="#" class="a_parent" id="assigning">
+                <div class="wrap">
+                    <span class="text">Assigns</span>
+                </div>
+            </a>
+                <div class="dd_menu">
+                    <ul>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="newAssigning">
+                                <div class="wrap">
+                                    <span class="text">Add Assigning</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="showData.html" class="dd_menu_a" id="allAssigns">
+                                <div class="wrap">
+                                    <span class="text">Show Assigns</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#" class="a_parent" id="alerts">
+                <div class="wrap">
+                    <span class="text">
+                        <i class="far fa-bell"></i>
+                    </span>
+                </div></a>
+                <div class="dd_menu">
+                    <ol class="alerts-container"></ol>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <button id="logOutButton">Log Out</button>
+</div>
+<div class="showData" id="showData">
+    <div class="table-container">
+        <table class="table">
+            <thead id="theThead">
+            </thead>
+            <tbody id="theTbody">
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div id="reservationFilterContainer">
+    <select name="reservationFilter" id="filterData" required="required">
+        <option label="Please Select" value=""></option>
+        <option label="Next Week" value="Next Week"></option>
+        <option label="Last Week" value="Last Week"></option>
+    </select>
+    </div>
+<div class="button-container">
+    <button id="remove">Remove<br>Selected</button>
+    <button id="edit">Edit<br>Selected</button>
+</div>
+<div class="button-container">
+    <button id="assign-boat">Assign<br>Boat</button>
+    <button id="assign-reservation">Assign<br>Reservation</button>
+</div>
+<div id="import-export-container">
+    <label for="import-Data">Import data from Xml:</label>
+    <input type="file" id="import-Data" name="xmlFile" accept="text/xml">
+    <br>
+<div class="button-container">
+    <button id="import-Data-button">ImportData</button>
+    <button id="export-Data">Export Data<br>To Xml</button>
+</div>
+</div>
+<br>
+<br>
+    <script src="menu.js"></script>
+    <script src="showData.js"></script>
+</div>
+</body>
+</html>
